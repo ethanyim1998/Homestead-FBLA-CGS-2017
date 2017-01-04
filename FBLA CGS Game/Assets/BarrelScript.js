@@ -12,9 +12,9 @@ function Start () {
 
 function Update () {
 	if (!rollingRight)
-		rb.AddForce(Vector3(-15, -0, 0));
+		rb.AddForce(Vector3(-30, -0, 0));
 	else
-		rb.AddForce(Vector3(15, -0, 0));
+		rb.AddForce(Vector3(30, -0, 0));
 }
 
 function OnCollisionStay (col : Collision){
@@ -22,5 +22,7 @@ function OnCollisionStay (col : Collision){
         rollingRight = false;
     else if (col.gameObject.tag == "Platform 2" || col.gameObject.tag == "Platform 4")
     	rollingRight = true;
+
+    Debug.Log("Hit");
 }
    
