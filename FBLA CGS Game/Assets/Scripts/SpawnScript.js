@@ -1,6 +1,5 @@
 ﻿#pragma strict
 
-//public var turretList : GameObject[] = new GameObject[88];
 public var originalBarrel: GameObject;
 public var barrel : GameObject;
 private var originalBarrelPosition: Vector3;
@@ -21,11 +20,11 @@ function Start(){
 
 
 function Update () {
-	createBullet();
+	createBarrel();
 }
 
 
-function createBullet(){
+function createBarrel(){
 	if(Time.timeSinceLevelLoad > nextFire){
 		nextFire = Time.timeSinceLevelLoad + Random.Range(3, 6);
 
