@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BarrelScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpawnScript.js">
     <Files>
-      <File FileName="Assets/BarrelScript.js" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/SpawnScript.js" Line="9" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
