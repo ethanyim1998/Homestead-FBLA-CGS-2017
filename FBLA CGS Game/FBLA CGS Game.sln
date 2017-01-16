@@ -1,14 +1,18 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-
+Project("{9FBD9FFE-DF4D-471C-B85C-1DC0CC4F797C}") = "FBLA CGS Game", "Assembly-CSharp.csproj", "{F7A0D442-E9E2-38FB-859F-158311B9421D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{F7A0D442-E9E2-38FB-859F-158311B9421D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7A0D442-E9E2-38FB-859F-158311B9421D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7A0D442-E9E2-38FB-859F-158311B9421D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7A0D442-E9E2-38FB-859F-158311B9421D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
