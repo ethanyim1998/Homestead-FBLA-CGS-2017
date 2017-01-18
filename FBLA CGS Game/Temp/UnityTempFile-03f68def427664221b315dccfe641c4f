@@ -94,5 +94,6 @@
 -r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll'
 -r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll'
 -i:UnityEditor
-'Assets/Scripts/BulletScript.js'
+'Assets/Scripts/BarrelScript.js'
+'Assets/Scripts/PlayerController.js'
 'Assets/Scripts/SpawnScript.js'

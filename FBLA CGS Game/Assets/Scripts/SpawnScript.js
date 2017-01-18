@@ -5,8 +5,6 @@ public var barrel : GameObject;
 private var originalBarrelPosition: Vector3;
 private var nextFire : float;
 private var rotation1 : Quaternion;
-public var bScript : BulletScript;
-
 
 function Start(){
 
