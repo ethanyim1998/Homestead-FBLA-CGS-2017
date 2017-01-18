@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+//testing comment for update
+
 var rb: Rigidbody;
 var forceLeft = -1;
 var forceRight = 1;
