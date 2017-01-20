@@ -1,11 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Animation.js">
     <Files>
-      <File FileName="Assets/Scripts/ResolutionScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerController.js" Line="54" Column="21" />
+      <File FileName="Assets/Scripts/PlayerController.js" Line="5" Column="34" />
       <File FileName="Assets/Scripts/SpawnScript.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BarrelScript.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ResolutionScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BarrelScript.js" Line="2" Column="1" />
+      <File FileName="Assets/Scripts/SpriteAnimation.cs" Line="5" Column="47" />
+      <File FileName="Assets/Scripts/Animation.js" Line="8" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
