@@ -29,6 +29,11 @@ function FixedUpdate(){
 
 
 function OnCollisionEnter(collision: Collision){
+/*
+	if(collision.gameObject.tag == "Platform 5"){
+		isFalling = false;
+	}
+*/
 	if(collision.gameObject.tag == "Platform 5"){
 		isFalling = false;
 	}
@@ -40,14 +45,11 @@ function OnCollisionExit(collision: Collision){
 		isFalling = true;
 		applyArtificialGravity();
 	}
-	if(collision.gameObject.tag == "Portal"){
-		onPortal = false;
-	}
 }
 
 function OnTriggerEnter(collision : Collider){
 	if(collision.gameObject.tag == "Portal"){
-		onPortal = true;
+			onPortal = true;
 	}
 }
 
@@ -67,7 +69,7 @@ function moveHorizontal(){
 
 function jump(){
 
-    if((Input.GetKeyDown(KeyCode.Space)) && !isFalling){
+    if((Input.GetKeyDown(KeyCode.UpArrow)) && !isFalling){
         rb.velocity = Vector3(0,jumpVelocity,0);
     }
 
@@ -87,6 +89,6 @@ function teleport(){
 		teleLocY = portal.transform.position.y;
 		this.gameObject.transform.position = Vector3(teleLocX, teleLocY, 0);
 	}
-	
+		
 }
 
