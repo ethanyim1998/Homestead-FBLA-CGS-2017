@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{9FBD9FFE-DF4D-471C-B85C-1DC0CC4F797C}") = "FBLA CGS Game", "Assembly-CSharp.csproj", "{F7A0D442-E9E2-38FB-859F-158311B9421D}"
 EndProject
+Project("{9FBD9FFE-DF4D-471C-B85C-1DC0CC4F797C}") = "FBLA CGS Game", "Assembly-CSharp-Editor.csproj", "{BB810AA3-59D5-18BF-FED6-A434444B68BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{F7A0D442-E9E2-38FB-859F-158311B9421D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7A0D442-E9E2-38FB-859F-158311B9421D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7A0D442-E9E2-38FB-859F-158311B9421D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB810AA3-59D5-18BF-FED6-A434444B68BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB810AA3-59D5-18BF-FED6-A434444B68BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB810AA3-59D5-18BF-FED6-A434444B68BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB810AA3-59D5-18BF-FED6-A434444B68BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
