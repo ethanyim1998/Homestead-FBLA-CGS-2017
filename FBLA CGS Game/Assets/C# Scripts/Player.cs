@@ -15,7 +15,6 @@ public class Player : MonoBehaviour {
 		
 		rb = gameObject.GetComponent<RigidBody2D>();
 		
-		
 	}
 	
 	// Update is called once per frame
