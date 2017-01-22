@@ -8,12 +8,12 @@ public class Player : MonoBehaviour {
 	public float jumpPower = 150f;
 	public bool grounded;
 
-	private RigidBody2D rb;
+	private Rigidbody2D rb;
 
 	// Use this for initialization
 	void Start () {
 		
-		rb = gameObject.GetComponent<RigidBody2D>();
+		rb = gameObject.GetComponent<Rigidbody2D>();
 		
 	}
 	
