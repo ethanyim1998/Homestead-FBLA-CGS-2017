@@ -10,6 +10,7 @@ private var onPortal : boolean = false;
 private var portal: GameObject;
 private var teleLocX : int;
 private var teleLocY : int;
+public var isHit : boolean = false;
 
 private var rb : Rigidbody;
 
@@ -29,13 +30,15 @@ function FixedUpdate(){
 
 
 function OnCollisionEnter(collision: Collision){
-/*
 	if(collision.gameObject.tag == "Platform 5"){
 		isFalling = false;
 	}
-*/
-	if(collision.gameObject.tag == "Platform 5"){
-		isFalling = false;
+	if (collision.gameObject.tag == "Barrel"){
+		Destroy(collision.gameObject);
+		isHit = true;
+	}
+	else{
+		isHit = false;
 	}
 }
 
