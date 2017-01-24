@@ -34,11 +34,8 @@ function OnCollisionEnter(collision: Collision){
 		isFalling = false;
 	}
 	if (collision.gameObject.tag == "Barrel"){
-		Destroy(collision.gameObject);
 		isHit = true;
-	}
-	else{
-		isHit = false;
+		Destroy(collision.gameObject);
 	}
 }
 
