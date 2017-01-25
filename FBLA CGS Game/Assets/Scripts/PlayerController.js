@@ -52,6 +52,7 @@ function OnCollisionExit(collision: Collision){
 function OnTriggerEnter(collision : Collider){
 	if(collision.gameObject.tag == "Portal"){
 			onPortal = true;
+			portal = collision.gameObject;
 	}
 }
 
@@ -84,11 +85,14 @@ function teleport(){
 	if (onPortal && Input.GetKeyDown(KeyCode.UpArrow)){
 		Debug.Log("TELEPORT WORKING");
 		var randomIndex = Random.Range(0, parentPortal.transform.childCount);
-		portal = parentPortal.transform.GetChild(randomIndex).gameObject;
-		teleLocX = portal.transform.position.x;
-		teleLocY = portal.transform.position.y -2;
+		var portalSub = parentPortal.transform.GetChild(randomIndex).gameObject;
+		while (portal == portalSub){
+			randomIndex = Random.Range(0, parentPortal.transform.childCount);
+			portalSub = parentPortal.transform.GetChild(randomIndex).gameObject;
+		}
+		teleLocX = portalSub.transform.position.x;
+		teleLocY = portalSub.transform.position.y -2;
 		this.gameObject.transform.position = Vector3(teleLocX, teleLocY, 0);
 	}
-		
 }
 

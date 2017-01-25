@@ -44,7 +44,8 @@ function Update () {
 	*/
 	if(RestartTimer>=0.6)
 	{
-		//SceneManager.LoadScene("Game Over");
+		//To change into the game over screen.
+		SceneManager.LoadScene("GameOver");
 	}
 }
 
