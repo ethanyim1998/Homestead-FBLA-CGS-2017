@@ -6,7 +6,7 @@ public class Player : MonoBehaviour {
 
 	public float speed = 50f;
 	public float maxSpeed = 4;
-	public float jumpPower = 150f;
+	public float jumpPower = 500f;
 	public bool grounded;
 
 	public Rigidbody2D rb;
@@ -25,12 +25,14 @@ public class Player : MonoBehaviour {
 		//anim.SetBool("Grounded", grounded);
 		//anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
 
+/*
 		if (Input.GetAxis("Horizontal") < -0.1f)
 			transform.localScale = new Vector3(-1, 1, 1);
 
 		if (Input.GetAxis("Horizontal") > 0.1f)
 			transform.localScale = new Vector3(1, 1, 1);
-	}
+
+*/	}
 
 	void /// <summary>
 	/// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
@@ -41,7 +43,7 @@ public class Player : MonoBehaviour {
 		float vert = Input.GetAxis("Vertical");
 
 		if (grounded && vert > 0) {
-			rb.AddForce(Vector2.up * 500);
+			rb.AddForce(Vector2.up * jumpPower);
 		}
 
 		rb.AddForce(Vector2.right * horiz * speed);
