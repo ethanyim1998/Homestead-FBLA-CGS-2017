@@ -26,7 +26,7 @@ function OnCollisionExit2D(col : Collision2D)
 	}
 	*/
 	force = 30;
-	if (col.gameObject.tag == "Platform 4") {
+	if (col.gameObject.name == "Platform 4") {
 		Destroy(gameObject);
 		Debug.Log("Destroyed");
 	}
