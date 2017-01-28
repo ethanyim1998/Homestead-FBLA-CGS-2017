@@ -38,6 +38,10 @@ public class Player : MonoBehaviour {
 	FixedUpdate()
 	{
 		float horiz = Input.GetAxis("Horizontal");
+		float vert = Input.GetAxis("Vertical");
+
+		if (grounded && vert > 0)
+		rb.AddForce(Vector2.up * speed);
 
 		rb.AddForce(Vector2.right * horiz * speed);
 		if (rb.velocity.x >= maxSpeed) {
