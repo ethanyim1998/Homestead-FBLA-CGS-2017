@@ -12,9 +12,8 @@ function Start () {
 }
 
 function Update () {
-	if (playerTransform.position.x > -210 && playerTransform.position.x < -50)
+	//if (playerTransform.position.x > -210 && playerTransform.position.x < -50)
 		playerX = playerTransform.position.x;
 	var playerY = playerTransform.position.y;
-	Debug.Log(playerX);
 	transform.position = new Vector3(playerX + cameraShiftX, playerY + cameraShiftY, transform.position.z);
 }
