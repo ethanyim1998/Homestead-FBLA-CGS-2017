@@ -47,8 +47,9 @@ public class Player : MonoBehaviour {
 		float horiz = Input.GetAxis("Horizontal");
 		float vert = Input.GetAxis("Vertical");
 
-		if (grounded && vert > 0 && !cannotJump) {
-			rb.AddForce(Vector2.up * jumpPower);
+		if (grounded && vert > 0) {
+			if (!cannotJump)
+				rb.AddForce(Vector2.up * jumpPower);
 		}
 
 		rb.AddForce(Vector2.right * horiz * speed);
