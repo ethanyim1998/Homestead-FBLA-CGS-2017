@@ -6,8 +6,7 @@ private var portal: GameObject;
 private var teleLocX : float;
 private var teleLocY : float;
 public var isHit : boolean = false;
-
-var rb: Rigidbody2D;
+public var rb: Rigidbody2D;
 
 
 function Start(){
@@ -22,17 +21,18 @@ function FixedUpdate(){
 }
 
 
-function OnCollisionEnter(collision: Collision){
+function OnCollisionEnter2D(collision: Collision2D){
 	if (collision.gameObject.tag == "Barrel"){
 		isHit = true;
 		Destroy(collision.gameObject);
 	}
 }
 
-function OnTriggerEnter(collision : Collider){
+function OnTriggerEnter2D(collision : Collider2D){
 	if(collision.gameObject.tag == "Portal"){
 			onPortal = true;
 			portal = collision.gameObject;
+			Debug.Log("Portal Collision Happened");
 	}
 }
 
