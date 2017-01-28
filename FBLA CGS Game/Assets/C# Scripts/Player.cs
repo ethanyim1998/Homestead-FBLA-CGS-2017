@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
 	public float jumpPower = 500f;
 	public bool grounded;
 	public int scale = 1;
+	private bool cannotJump = false;
 
 	public Rigidbody2D rb;
 	//private Animator anim;
@@ -46,7 +47,7 @@ public class Player : MonoBehaviour {
 		float horiz = Input.GetAxis("Horizontal");
 		float vert = Input.GetAxis("Vertical");
 
-		if (grounded && vert > 0) {
+		if (grounded && vert > 0 && !cannotJump) {
 			rb.AddForce(Vector2.up * jumpPower);
 		}
 
@@ -57,5 +58,18 @@ public class Player : MonoBehaviour {
 		else if (rb.velocity.x <= -maxSpeed) {
 			rb.velocity = new Vector2(-maxSpeed, rb.velocity.y);
 		}
+	}
+
+
+	void OnTriggerEnter(Collider collision)
+	{
+		if (collision.gameObject.tag == "Portal")
+			cannotJump = true;
+	}
+
+	void OnTriggerExit(Collider collision)
+	{
+		if (collision.gameObject.tag == "Portal")
+			cannotJump = false;
 	}
 }
