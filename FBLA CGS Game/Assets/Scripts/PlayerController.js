@@ -54,7 +54,7 @@ function teleport(){
 			portalSub = parentPortal.transform.GetChild(randomIndex).gameObject;
 		}
 		teleLocX = portalSub.transform.position.x;
-		teleLocY = portalSub.transform.position.y -2;
+		teleLocY = portalSub.transform.position.y;
 		this.gameObject.transform.position = Vector3(teleLocX, teleLocY, 0);
 	}
 }
