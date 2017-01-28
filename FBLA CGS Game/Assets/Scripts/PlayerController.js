@@ -30,11 +30,19 @@ function OnCollisionEnter2D(collision: Collision2D){
 
 function OnTriggerStay2D(collision : Collider2D){
 	if(collision.gameObject.tag == "Portal"){
-			onPortal = true;
-			portal = collision.gameObject;
-			Debug.Log("Portal Collision Happened");
+		onPortal = true;
+		portal = collision.gameObject;
+		Debug.Log("Portal Collision Happened");
 	}
 }
+
+function OnTriggerEnter2D(collision : Collider2D){
+		if (collision.gameObject.tag == "Flag"){
+		Debug.Log("Flag Collision Happened");
+		changeScene();
+	}
+}
+
 
 function OnTriggerExit2D(collision: Collider2D){
 	if(collision.gameObject.tag == "Portal"){
@@ -57,5 +65,12 @@ function teleport(){
 		teleLocY = portalSub.transform.position.y;
 		this.gameObject.transform.position = Vector3(teleLocX, teleLocY, 0);
 	}
+}
+
+function changeScene(){
+	yield WaitForSeconds(1);
+	if (Application.loadedLevelName == "Scene 1")
+		SceneManager.LoadScene("Scene 2");
+
 }
 
