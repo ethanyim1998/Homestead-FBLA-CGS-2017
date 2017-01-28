@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
 	public float jumpPower = 150f;
 	public bool grounded;
 
-	private Rigidbody2D rb;
+	public Rigidbody2D rb;
 	//private Animator anim;
 
 	// Use this for initialization

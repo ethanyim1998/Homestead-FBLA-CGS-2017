@@ -1,51 +1,31 @@
 ﻿#pragma strict
 
-
-public var moveSpeed : float = 30;
-public var jumpVelocity : int = 30;
-public var artificialGravity : int = -15000;
 public var parentPortal : GameObject;
-private var isFalling : boolean = false;
 private var onPortal : boolean = false;
 private var portal: GameObject;
 private var teleLocX : float;
 private var teleLocY : float;
 public var isHit : boolean = false;
 
-private var rb : Rigidbody;
+var rb: Rigidbody2D;
 
 
 function Start(){
 	//Part below is initialized in the start() method because the Rigidbody 
 	//does not exist before the game is running.
-	rb = GetComponent.<Rigidbody>();
+	rb = GetComponent.<Rigidbody2D>();
 }
 
 
 function FixedUpdate(){
-	moveHorizontal();
-	jump();
 	teleport();
 }
 
 
 function OnCollisionEnter(collision: Collision){
-	if(collision.gameObject.tag == "Platform 5" || collision.gameObject.tag == "Platform 4" || collision.gameObject.tag == "Platform 3" ||
-	   collision.gameObject.tag == "Platform 2" || collision.gameObject.tag == "Platform 1" ){
-		isFalling = false;
-	}
 	if (collision.gameObject.tag == "Barrel"){
 		isHit = true;
 		Destroy(collision.gameObject);
-	}
-}
-
-
-function OnCollisionExit(collision: Collision){
-	if(collision.gameObject.tag == "Platform 5" || collision.gameObject.tag == "Platform 4" || collision.gameObject.tag == "Platform 3" ||
-	   collision.gameObject.tag == "Platform 2" || collision.gameObject.tag == "Platform 1" ){
-		isFalling = true;
-		applyArtificialGravity();
 	}
 }
 
@@ -63,23 +43,6 @@ function OnTriggerExit(collision: Collider){
 	}
 }
 
-function moveHorizontal(){
-	var move = Vector3(Input.GetAxis("Horizontal"), 0, 0);
-	transform.position += move * moveSpeed * Time.deltaTime;
-}
-
-
-function jump(){
-    if((Input.GetKeyDown(KeyCode.UpArrow)) && !isFalling && !onPortal){
-        rb.velocity = Vector3(0,jumpVelocity,0);
-    }
-
-}
-
-function applyArtificialGravity(){
-	yield WaitForSeconds(.3);
-	rb.AddForce(0,artificialGravity,0);
-}
 
 function teleport(){
 	if (onPortal && Input.GetKeyDown(KeyCode.UpArrow)){
