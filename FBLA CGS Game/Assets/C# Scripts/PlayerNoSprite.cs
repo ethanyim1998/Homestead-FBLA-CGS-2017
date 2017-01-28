@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class PlayerNoSprite : MonoBehaviour {
 
 	public float speed = 50f;
 	public float maxSpeed = 4;
@@ -25,14 +25,6 @@ public class Player : MonoBehaviour {
 		//anim.SetBool("Grounded", grounded);
 		//anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
 
-
-		if (Input.GetAxis("Horizontal") < -0.1f) {
-			transform.localScale = new Vector3(-1, 1, 1);
-		}
-		if (Input.GetAxis ("Horizontal") > 0.1f) {
-			transform.localScale = new Vector3 (1, 1, 1);
-
-		}
 		
 	}
 
