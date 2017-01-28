@@ -61,15 +61,17 @@ public class Player : MonoBehaviour {
 	}
 
 
-	void OnTriggerEnter(Collider collision)
+	void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.tag == "Portal")
 			cannotJump = true;
 	}
 
-	void OnTriggerExit(Collider collision)
+
+	void OnTriggerExit2D(Collider2D collision)
 	{
 		if (collision.gameObject.tag == "Portal")
 			cannotJump = false;
 	}
+
 }

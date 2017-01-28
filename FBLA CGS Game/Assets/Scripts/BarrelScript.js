@@ -14,7 +14,7 @@ function FixedUpdate () {
 }
 
 
-function OnCollisionExit(col : Collision) 
+function OnCollisionExit2D(col : Collision2D) 
 {
 /*
 	if (col.gameObject.tag == "Platform 1" || col.gameObject.tag == "Platform 3") {
