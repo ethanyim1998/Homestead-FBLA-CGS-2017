@@ -9,7 +9,7 @@ function Start () {
 
 
 function FixedUpdate () {
-	//force += 15;
+	force += 15;
 	rb.AddForce(Vector3.down * force);
 }
 

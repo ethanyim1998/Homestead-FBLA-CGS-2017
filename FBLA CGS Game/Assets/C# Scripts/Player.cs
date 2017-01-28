@@ -48,8 +48,7 @@ public class Player : MonoBehaviour {
 		float vert = Input.GetAxis("Vertical");
 
 		if (grounded && vert > 0) {
-			if (!cannotJump)
-				rb.AddForce(Vector2.up * jumpPower);
+			rb.AddForce(Vector2.up * jumpPower);
 		}
 
 		rb.AddForce(Vector2.right * horiz * speed);
@@ -60,19 +59,6 @@ public class Player : MonoBehaviour {
 			rb.velocity = new Vector2(-maxSpeed, rb.velocity.y);
 		}
 	}
-
-
-	void OnTriggerEnter2D(Collider2D collision)
-	{
-		if (collision.gameObject.tag == "Portal")
-			cannotJump = true;
-	}
-
-
-	void OnTriggerExit2D(Collider2D collision)
-	{
-		if (collision.gameObject.tag == "Portal")
-			cannotJump = false;
-	}
+		
 
 }

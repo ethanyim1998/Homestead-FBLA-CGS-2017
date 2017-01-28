@@ -17,8 +17,9 @@ public class GroundControl : MonoBehaviour {
 	/// <param name="other">The other Collider2D involved in this collision.</param>
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		player.grounded = true;
-	}
+		if (other.gameObject.tag == "Platform")
+			player.grounded = true;
+	}	
 	/// <summary>
 	/// Sent each frame where another object is within a trigger collider
 	/// attached to this object (2D physics only).
@@ -26,7 +27,8 @@ public class GroundControl : MonoBehaviour {
 	/// <param name="other">The other Collider2D involved in this collision.</param>
 	void OnTriggerStay2D(Collider2D other)
 	{
-		player.grounded = true;
+		if (other.gameObject.tag == "Platform")
+			player.grounded = true;
 	}
 
 	void /// <summary>
@@ -36,7 +38,8 @@ public class GroundControl : MonoBehaviour {
 	/// <param name="other">The other Collider2D involved in this collision.</param>
 	OnTriggerExit2D(Collider2D other)
 	{
-		player.grounded = false;
+		if (other.gameObject.tag == "Platform")
+			player.grounded = false;
 	}
 	
 }
