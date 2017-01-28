@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\C# Scripts\GroundControl.cs" />
+     <Compile Include="Assets\C# Scripts\GroundControlNoSprite.cs" />
      <Compile Include="Assets\C# Scripts\Player.cs" />
+     <Compile Include="Assets\C# Scripts\PlayerNoSprite.cs" />
      <Compile Include="Assets\Scripts\ResolutionScript.cs" />
      <Compile Include="Assets\Scripts\SpriteAnimation.cs" />
  <Reference Include="UnityEngine.UI">

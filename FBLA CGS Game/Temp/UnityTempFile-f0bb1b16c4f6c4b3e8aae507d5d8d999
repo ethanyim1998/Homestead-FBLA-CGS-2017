@@ -81,7 +81,9 @@
 -define:UNITY_EDITOR_OSX
 -define:UNITY_TEAM_LICENSE
 'Assets/C# Scripts/GroundControl.cs'
+'Assets/C# Scripts/GroundControlNoSprite.cs'
 'Assets/C# Scripts/Player.cs'
+'Assets/C# Scripts/PlayerNoSprite.cs'
 'Assets/Scripts/ResolutionScript.cs'
 'Assets/Scripts/SpriteAnimation.cs'
 -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll'
