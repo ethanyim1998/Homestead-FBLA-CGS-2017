@@ -40,8 +40,9 @@ public class Player : MonoBehaviour {
 		float horiz = Input.GetAxis("Horizontal");
 		float vert = Input.GetAxis("Vertical");
 
-		if (grounded && vert > 0)
-		rb.AddForce(Vector2.up * speed);
+		if (grounded && vert > 0) {
+			rb.AddForce(Vector2.up * 500);
+		}
 
 		rb.AddForce(Vector2.right * horiz * speed);
 		if (rb.velocity.x >= maxSpeed) {

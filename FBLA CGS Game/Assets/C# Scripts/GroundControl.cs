@@ -7,7 +7,7 @@ public class GroundControl : MonoBehaviour {
 
 	void Start()
 	{
-		gameObject.GetComponentInParent<Player>();
+		player = gameObject.GetComponentInParent<Player>();
 	}
 
 	/// <summary>
@@ -16,6 +16,15 @@ public class GroundControl : MonoBehaviour {
 	/// </summary>
 	/// <param name="other">The other Collider2D involved in this collision.</param>
 	void OnTriggerEnter2D(Collider2D other)
+	{
+		player.grounded = true;
+	}
+	/// <summary>
+	/// Sent each frame where another object is within a trigger collider
+	/// attached to this object (2D physics only).
+	/// </summary>
+	/// <param name="other">The other Collider2D involved in this collision.</param>
+	void OnTriggerStay2D(Collider2D other)
 	{
 		player.grounded = true;
 	}
