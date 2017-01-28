@@ -8,8 +8,8 @@ public var instructions: String[] = ["Level 1: Tutorial",
 									 "Use the up arrow to jump",
 									 "When you reach a portal, press the space bar to teleport between portals",
 									 "When you reach the flag, you will be able to move onto the next level"];
-public var player : GameObject;
 private var instructionNum : int;
+
 
 function Start() 
 {
@@ -19,12 +19,14 @@ function Start()
 	TimerStart();
 }
 
+
 function TimerStart() : IEnumerator
 {
 	printInstructions();
 	yield WaitForSeconds(8);
 	TimerStart();
 }
+
 
 function printInstructions()
 {
