@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/C# Scripts/GroundControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.js">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/HPController.js" Line="47" Column="41" />
-      <File FileName="Assets/Scripts/timer.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.js" Line="58" Column="69" />
+      <File FileName="Assets/C# Scripts/Player.cs" Line="31" Column="4" />
+      <File FileName="Assets/Scripts/HPController.js" Line="54" Column="1" />
       <File FileName="Assets/C# Scripts/GroundControl.cs" Line="20" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

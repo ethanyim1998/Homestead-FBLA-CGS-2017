@@ -25,14 +25,22 @@ public class Player : MonoBehaviour {
 		//anim.SetBool("Grounded", grounded);
 		//anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
 
+//<<<<<<< Updated upstream
 /*
 		if (Input.GetAxis("Horizontal") < -0.1f)
 			transform.localScale = new Vector3(-1, 1, 1);
+=======
+		if (Input.GetAxis ("Horizontal") < -0.1f) {
+			transform.localScale = new Vector3 (-1, 1, 1);
+			Debug.Log ("Moving left");
+		}
+>>>>>>> Stashed changes
 
 		if (Input.GetAxis("Horizontal") > 0.1f)
 			transform.localScale = new Vector3(1, 1, 1);
 
-*/	}
+	*/ }
+
 
 	void /// <summary>
 	/// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
