@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
 	public float maxSpeed = 4;
 	public float jumpPower = 500f;
 	public bool grounded;
+	public int scale = 1;
 
 	public Rigidbody2D rb;
 	//private Animator anim;
@@ -27,10 +28,10 @@ public class Player : MonoBehaviour {
 
 
 		if (Input.GetAxis("Horizontal") < -0.1f) {
-			transform.localScale = new Vector3(-1, 1, 1);
+			transform.localScale = new Vector3(-1 * scale, 1*scale, 1*scale);
 		}
 		if (Input.GetAxis ("Horizontal") > 0.1f) {
-			transform.localScale = new Vector3 (1, 1, 1);
+			transform.localScale = new Vector3 (1*scale, 1*scale, 1*scale);
 
 		}
 		
