@@ -135,7 +135,12 @@ function OnTriggerExit2D(collision : Collider2D){
 		q2 = false;
 		q3 = false;
 		onQuestionMark = false;
-
+		if (collision.gameObject.name == "Question Mark 1" && a1)
+			Destroy(collision.gameObject);
+		else if (collision.gameObject.name == "Question Mark 2" && a2)
+			Destroy(collision.gameObject);
+		else if (collision.gameObject.name == "Question Mark 3" && a3)
+			Destroy(collision.gameObject);
 	}
 
 }
