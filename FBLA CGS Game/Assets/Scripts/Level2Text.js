@@ -11,13 +11,16 @@ public var instructions: String[] = ["Level 2: Business Questions",
 public var questionAndAnswer: String[] = ["Which type of business is the hardest to start? \\n A) Sole Proprietorship \\n B) Partnership \\n C) Corporation",
 										  "Situation in which a firm legally cease to exist when an owner dies, quits, or a new owner is added is... \\n A) Limited Life \\n B) Unlimited Life \\n C) Liquidity",
 										  "Philosophy that goverment should not interfere with business activity is... \\n A) Laissez-faire \\n B) Law of Demand \\n C) Lockout" ];
-public var player: GameObject;
+public var rb: Rigidbody2D;
 private var instructionNum : int;
+private var questionNum: int;
 
 
 function Start() 
 {
+	rb = GetComponent.<Rigidbody2D>();
 	instructionNum = 0;
+	questionNum = 0;
 	textBox.text = " ";
 	yield WaitForSeconds(2);
 	TimerStart();
@@ -42,5 +45,24 @@ function printInstructions()
 	yield WaitForSeconds(4);
 	textBox.text = " ";
 	yield WaitForSeconds(2);
+}
+
+
+function OnTriggerEnter2D(collision : Collider2D){
+	var message;
+	if (instructionNum == instructions.Length){
+		if (collision.gameObject.name == "Question Mark 1"){
+			message = questionAndAnswer[0];
+			textBox.text = message;
+		}
+		else if (collision.gameObject.name == "Question Mark 2"){
+			message = questionAndAnswer[1];
+			textBox.text = message;
+		}
+		else if (collision.gameObject.name == "Question Mark 3"){
+			message = questionAndAnswer[2];
+			textBox.text = message;
+		}
+	}
 }
 
