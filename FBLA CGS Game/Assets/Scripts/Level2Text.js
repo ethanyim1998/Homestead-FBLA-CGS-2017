@@ -45,26 +45,39 @@ function Update()
 {
 	if (onQuestionMark == true){
 		if (q1 == true && a1 == false){
-			if(Input.GetKey(KeyCode.C)){
+			var e : Event = Event.current;
+			if(Input.GetKeyDown(KeyCode.C)){
 				message = "Correct!";
 				textBox.text = message;
 				a1 = true;
 			}
+			else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.B)) {
+				message = "Incorrect!";
+				textBox.text = message;
+			}
 
 		}
 		else if (q2 == true && a2 == false){
-			if(Input.GetKey(KeyCode.A)){
+			if(Input.GetKeyDown(KeyCode.A)){
 				message = "Correct!";
 				textBox.text = message;
 				a2 = true;
 			}
+			else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C)) {
+				message = "Incorrect!";
+				textBox.text = message;
+			}
 
 		}
 		else if (q3 == true && a3 == false){
-			if(Input.GetKey(KeyCode.A)){
+			if(Input.GetKeyDown(KeyCode.A)){
 				message = "Correct!";
 				textBox.text = message;
 				a3 = true;
+			}
+			else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C)) {
+				message = "Incorrect!";
+				textBox.text = message;
 			}
 		}
 
@@ -93,7 +106,7 @@ function printInstructions()
 }
 
 
-function OnTriggerStay2D(collision : Collider2D){
+function OnTriggerEnter2D(collision : Collider2D){
 	if (instructionNum == instructions.Length){
 		if (collision.gameObject.name == "Question Mark 1" && a1 == false){
 			message = questionAndAnswer[0];
@@ -129,8 +142,4 @@ function OnTriggerExit2D(collision : Collider2D){
 
 	}
 
-}
-
-function wait(){
-	yield WaitForSeconds(2);
 }
