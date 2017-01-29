@@ -1,15 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Level2Text.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.js">
     <Files>
       <File FileName="Assets/C# Scripts/Player.cs" Line="51" Column="4" />
-      <File FileName="Assets/Scripts/PlayerController.js" Line="38" Column="26" />
-      <File FileName="Assets/C# Scripts/GroundControl.cs" Line="42" Column="4" />
+      <File FileName="Assets/Scripts/PlayerController.js" Line="69" Column="34" />
+      <File FileName="Assets/C# Scripts/GroundControl.cs" Line="41" Column="112" />
       <File FileName="Assets/Scripts/BarrelScript.js" Line="1" Column="15" />
-      <File FileName="Assets/Scripts/HPController.js" Line="35" Column="18" />
-      <File FileName="Assets/Scripts/TutorialText.js" Line="36" Column="22" />
+      <File FileName="Assets/Scripts/HPController.js" Line="54" Column="12" />
+      <File FileName="Assets/Scripts/TutorialText.js" Line="26" Column="24" />
       <File FileName="Assets/Scripts/TutorialCamera.js" Line="15" Column="4" />
-      <File FileName="Assets/Scripts/Level2Text.js" Line="53" Column="22" />
+      <File FileName="Assets/Scripts/Level2Text.js" Line="24" Column="7" />
+      <File FileName="Assets/C# Scripts/BreakableBlock.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SpawnScript.js" Line="7" Column="24" />
+      <File FileName="Assets/Scripts/SpawnFlag.js" Line="18" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
