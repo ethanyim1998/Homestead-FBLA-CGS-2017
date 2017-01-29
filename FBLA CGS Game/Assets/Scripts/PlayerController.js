@@ -32,13 +32,11 @@ function OnTriggerStay2D(collision : Collider2D){
 	if(collision.gameObject.tag == "Portal"){
 		onPortal = true;
 		portal = collision.gameObject;
-		Debug.Log("Portal Collision Happened");
 	}
 }
 
 function OnTriggerEnter2D(collision : Collider2D){
 		if (collision.gameObject.tag == "Flag"){
-		Debug.Log("Flag Collision Happened");
 		changeScene();
 	}
 }
@@ -47,14 +45,12 @@ function OnTriggerEnter2D(collision : Collider2D){
 function OnTriggerExit2D(collision: Collider2D){
 	if(collision.gameObject.tag == "Portal"){
 		onPortal = false;
-		Debug.Log("Portal Collision Stopped");
 	}
 }
 
 
 function teleport(){
 	if (onPortal && Input.GetKeyDown(KeyCode.Space)){
-		Debug.Log("TELEPORT WORKING");
 		var randomIndex = Random.Range(0, parentPortal.transform.childCount);
 		var portalSub = parentPortal.transform.GetChild(randomIndex).gameObject;
 		while (portal == portalSub){

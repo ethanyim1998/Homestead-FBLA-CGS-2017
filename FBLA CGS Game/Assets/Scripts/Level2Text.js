@@ -8,9 +8,9 @@ public var instructions: String[] = ["Level 2: Business Questions",
 									 "Go to a question mark to receive a question",
 									 "Choose an answer by pressing A, B, C, or D on your keyboard",
 									 "Once you correctly answer all three, the flag will appear"];
-public var questionAndAnswer: String[] = ["Which type of business is the hardest to start? \\n A) Sole Proprietorship \\n B) Partnership \\n C) Corporation",
-										  "Situation in which a firm legally cease to exist when an owner dies, quits, or a new owner is added is... \\n A) Limited Life \\n B) Unlimited Life \\n C) Liquidity",
-										  "Philosophy that goverment should not interfere with business activity is... \\n A) Laissez-faire \\n B) Law of Demand \\n C) Lockout" ];
+public var questionAndAnswer: String[] = ["Which type of business is the hardest to start?" + System.Environment.NewLine + "A) Sole Proprietorship" + System.Environment.NewLine + "B) Partnership" + System.Environment.NewLine + "C) Corporation",
+										  "Situation in which a firm legally cease to exist when an owner dies, quits, or a new owner is added is..." + System.Environment.NewLine + "A) Limited Life" + System.Environment.NewLine + "B) Unlimited Life" + System.Environment.NewLine + "C) Liquidity",
+										  "Philosophy that goverment should not interfere with business activity is..." + System.Environment.NewLine + "A) Laissez-faire" + System.Environment.NewLine + "B) Law of Demand" + System.Environment.NewLine + "C) Lockout" ];
 public var rb: Rigidbody2D;
 private var instructionNum : int;
 private var questionNum: int;

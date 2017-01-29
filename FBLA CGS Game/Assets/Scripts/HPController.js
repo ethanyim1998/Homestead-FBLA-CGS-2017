@@ -53,7 +53,6 @@ function Update () {
 function HitTest() {
 	if(player.isHit)
 	{
-		Debug.Log("Player Got Hit");
 		HitImage = true;
 	}
 
@@ -62,7 +61,6 @@ function HitTest() {
 		if (currentHP >=  0){
 			currentHP--;
 			health.text = currentHP.ToString();
-			Debug.Log(Time.timeSinceLevelLoad);
 			DamageImage.color.a = 255;
 			HitImage=false;
 			player.isHit=false;

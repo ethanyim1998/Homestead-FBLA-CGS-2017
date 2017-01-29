@@ -16,19 +16,9 @@ function FixedUpdate () {
 
 function OnCollisionExit2D(col : Collision2D) 
 {
-/*
-	if (col.gameObject.tag == "Platform 1" || col.gameObject.tag == "Platform 3") {
-		force = 30;
 
-	}
-	else if (col.gameObject.tag == "Platform 2") {
-		force = 30;
-	}
-	*/
 	force = 30;
 	if (col.gameObject.name == "Platform 4") {
 		Destroy(gameObject);
-		Debug.Log("Destroyed");
 	}
-
 }
