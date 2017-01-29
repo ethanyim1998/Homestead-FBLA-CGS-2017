@@ -48,40 +48,35 @@ function Update()
 			var e : Event = Event.current;
 			if(Input.GetKeyDown(KeyCode.C)){
 				message = "Correct!";
-				textBox.text = message;
 				a1 = true;
 			}
 			else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.B)) {
 				message = "Incorrect!";
-				textBox.text = message;
 			}
 
 		}
 		else if (q2 == true && a2 == false){
 			if(Input.GetKeyDown(KeyCode.A)){
 				message = "Correct!";
-				textBox.text = message;
 				a2 = true;
 			}
 			else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C)) {
 				message = "Incorrect!";
-				textBox.text = message;
 			}
 
 		}
 		else if (q3 == true && a3 == false){
 			if(Input.GetKeyDown(KeyCode.A)){
 				message = "Correct!";
-				textBox.text = message;
 				a3 = true;
 			}
 			else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C)) {
 				message = "Incorrect!";
-				textBox.text = message;
 			}
 		}
-
+		textBox.text = message;
 	}
+
 }
 
 
@@ -89,7 +84,7 @@ function TimerStart() : IEnumerator
 {
 	if (instructionNum < instructions.Length){
 		printInstructions();
-		yield WaitForSeconds(6);
+		yield WaitForSeconds(4);
 		TimerStart();
 	}
 }
@@ -100,9 +95,10 @@ function printInstructions()
 	message = instructions[instructionNum];
 	textBox.text = message;
 	instructionNum++;
-	yield WaitForSeconds(4);
-	textBox.text = " ";
-	yield WaitForSeconds(2);
+	yield WaitForSeconds(3);
+	message = " ";
+	textBox.text = message;
+	yield WaitForSeconds(1);
 }
 
 
