@@ -19,9 +19,10 @@ private var onQuestionMark : boolean;
 private var q1 : boolean;
 private var q2 : boolean;
 private var q3 : boolean;
-private var a1 : boolean;
-private var a2 : boolean;
-private var a3 : boolean;
+public var a1 : boolean;
+public var a2 : boolean;
+public var a3 : boolean;
+
 
 function Start() 
 {
@@ -126,6 +127,7 @@ function OnTriggerEnter2D(collision : Collider2D){
 		}
 	}
 }
+
 
 function OnTriggerExit2D(collision : Collider2D){
 	if (collision.gameObject.tag == "Question"){

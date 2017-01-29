@@ -36,7 +36,7 @@ function OnTriggerStay2D(collision : Collider2D){
 }
 
 function OnTriggerEnter2D(collision : Collider2D){
-		if (collision.gameObject.tag == "Flag"){
+	if (collision.gameObject.tag == "Flag"){
 		changeScene();
 	}
 }
@@ -67,6 +67,10 @@ function changeScene(){
 	yield WaitForSeconds(1);
 	if (Application.loadedLevelName == "Scene 1")
 		SceneManager.LoadScene("Scene 2");
+	else if (Application.loadedLevelName == "Scene 2")
+		SceneManager.LoadScene("Scene 3");
+	else if (Application.loadedLevelName == "Scene 3")
+		SceneManager.LoadScene("Scoreboard");
 
 }
 

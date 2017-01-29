@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b97492115938b4282a90dea7b8c5fc88
+timeCreated: 1485673693
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - level2TextScript: {instanceID: 0}
+  - flag: {fileID: 1968117988706746, guid: 7961ca353fc6d41b6b1b18cf9a63c359, type: 2}
+  - originalFlag: {fileID: 1968117988706746, guid: 7961ca353fc6d41b6b1b18cf9a63c359,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

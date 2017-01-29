@@ -23,7 +23,7 @@ function Start()
 function TimerStart() : IEnumerator
 {
 	printInstructions();
-	yield WaitForSeconds(8);
+	yield WaitForSeconds(4);
 	TimerStart();
 }
 
@@ -33,8 +33,8 @@ function printInstructions()
 	var message = instructions[instructionNum];
 	textBox.text = message;
 	instructionNum++;
-	yield WaitForSeconds(5);
-	textBox.text = " ";
 	yield WaitForSeconds(3);
+	textBox.text = " ";
+	yield WaitForSeconds(1);
 }
 
