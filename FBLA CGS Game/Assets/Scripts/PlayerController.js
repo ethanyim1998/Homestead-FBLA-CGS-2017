@@ -64,7 +64,6 @@ function teleport(){
 }
 
 function changeScene(){
-	yield WaitForSeconds(1);
 	if (Application.loadedLevelName == "Scene 1")
 		SceneManager.LoadScene("Scene 2");
 	else if (Application.loadedLevelName == "Scene 2")

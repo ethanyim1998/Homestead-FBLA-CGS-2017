@@ -29,10 +29,11 @@ function TimerStart() : IEnumerator
 
 
 function printInstructions()
-{
-	var message = instructions[instructionNum];
-	textBox.text = message;
-	instructionNum++;
+{	if (instructionNum < instructions.Length){
+		var message = instructions[instructionNum];
+		textBox.text = message;
+		instructionNum++;
+	}
 	yield WaitForSeconds(3);
 	textBox.text = " ";
 	yield WaitForSeconds(1);
