@@ -24,7 +24,7 @@ function Update () {
 
 function createBarrel(){
 	if(Time.timeSinceLevelLoad > nextFire){
-		nextFire = Time.timeSinceLevelLoad + Random.Range(3, 6);
+		nextFire = Time.timeSinceLevelLoad + Random.Range(2, 3);
 
 		//Part below for creating barrels
 		var cBullet1 = Instantiate(barrel, originalBarrelPosition, rotation1); //Back wall

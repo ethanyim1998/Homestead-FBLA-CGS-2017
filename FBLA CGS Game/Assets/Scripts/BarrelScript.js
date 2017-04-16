@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 var rb: Rigidbody2D;
-var force = 30;
+var force = 40;
 
 function Start () {
 	rb = GetComponent.<Rigidbody2D>();
@@ -9,7 +9,7 @@ function Start () {
 
 
 function FixedUpdate () {
-	force += 15;
+	force += 30;
 	rb.AddForce(Vector3.down * force);
 }
 
@@ -17,7 +17,7 @@ function FixedUpdate () {
 function OnCollisionExit2D(col : Collision2D) 
 {
 
-	force = 30;
+	force = 40;
 	if (col.gameObject.name == "Platform 4") {
 		Destroy(gameObject);
 	}
