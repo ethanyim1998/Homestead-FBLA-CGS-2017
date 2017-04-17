@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
 	private bool cannotJump = false;
 
 	public Rigidbody2D rb;
+	public GameObject bullet;
 	//private Animator anim;
 
 	// Use this for initialization
@@ -34,6 +35,11 @@ public class Player : MonoBehaviour {
 		if (Input.GetAxis ("Horizontal") > 0.1f) {
 			transform.localScale = new Vector3 (1*scale, 1*scale, 1*scale);
 
+		}
+
+		if (Input.GetKeyDown(KeyCode.LeftShift)) {
+			print("shift logged");
+			Instantiate(bullet, this.transform.position, this.transform.rotation);
 		}
 		
 	}
@@ -59,6 +65,8 @@ public class Player : MonoBehaviour {
 			rb.velocity = new Vector2(-maxSpeed, rb.velocity.y);
 		}
 	}
+
+
 		
 
 }

@@ -13,24 +13,22 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
 
-        Vector3 pos = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
-        this.transform.position = pos;
-
-        if (player.transform.localScale.x >= 0)
+        if (player.GetComponent<Rigidbody2D>().transform.localScale.x >= 0)
             rb.velocity = new Vector2(bulletSpeed, 0);
         else
             rb.velocity = new Vector2(-bulletSpeed, 0);
+
+            
+       
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.magnitude >= 0)
-            rb.velocity = new Vector2(bulletSpeed, 0);
-        else
-            rb.velocity = new Vector2(-bulletSpeed, 0);
           
     }
 }

@@ -4,8 +4,6 @@ Project("{9FBD9FFE-DF4D-471C-B85C-1DC0CC4F797C}") = "FBLA CGS Game", "Assembly-C
 EndProject
 Project("{9FBD9FFE-DF4D-471C-B85C-1DC0CC4F797C}") = "FBLA CGS Game", "Assembly-CSharp-Editor.csproj", "{BB810AA3-59D5-18BF-FED6-A434444B68BF}"
 EndProject
-Project("{9FBD9FFE-DF4D-471C-B85C-1DC0CC4F797C}") = "FBLA CGS Game", "Assembly-UnityScript.unityproj", "{9376C6E4-75DE-936B-86BD-E9F6FE944D12}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,10 +18,6 @@ Global
 		{BB810AA3-59D5-18BF-FED6-A434444B68BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB810AA3-59D5-18BF-FED6-A434444B68BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB810AA3-59D5-18BF-FED6-A434444B68BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9376C6E4-75DE-936B-86BD-E9F6FE944D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9376C6E4-75DE-936B-86BD-E9F6FE944D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9376C6E4-75DE-936B-86BD-E9F6FE944D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9376C6E4-75DE-936B-86BD-E9F6FE944D12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
