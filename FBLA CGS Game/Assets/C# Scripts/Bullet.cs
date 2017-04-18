@@ -36,11 +36,9 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag.Equals("Barrel")) {
-            print("Barrel Hit");
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         } else if (other.gameObject.tag.Equals("Wall")) {
-            print("wall hit");
             Destroy(this.gameObject);
         }
     }
