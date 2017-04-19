@@ -53,6 +53,7 @@
      <Compile Include="Assets\C# Scripts\BreakableBlock.cs" />
      <Compile Include="Assets\C# Scripts\Bullet.cs" />
      <Compile Include="Assets\C# Scripts\GroundControl.cs" />
+     <Compile Include="Assets\C# Scripts\Health.cs" />
      <Compile Include="Assets\C# Scripts\KillScript.cs" />
      <Compile Include="Assets\C# Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\ResolutionScript.cs" />
