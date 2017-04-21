@@ -39,7 +39,7 @@ public class Player : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.LeftShift)) {
 			GameObject generatedBullet = (GameObject)Instantiate(bullet, this.transform.position, this.transform.rotation);
-			generatedBullet.GetComponent<Bullet>().bulletDamage = Random.Range(3.0f, 7.0f);
+			generatedBullet.GetComponent<Bullet>().bulletDamage = Mathf.Round(Random.Range(3.0f, 7.0f)*10f)/10f;
 		}
 		
 	}
