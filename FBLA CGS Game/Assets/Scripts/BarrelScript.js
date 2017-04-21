@@ -2,6 +2,7 @@
 
 var rb: Rigidbody2D;
 var force = 40;
+var maxHP = 50;
 
 function Start () {
 	rb = GetComponent.<Rigidbody2D>();

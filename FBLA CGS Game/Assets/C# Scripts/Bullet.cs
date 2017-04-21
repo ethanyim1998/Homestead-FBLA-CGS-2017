@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     public GameObject player;
 
     public float bulletSpeed = 1000;
+
+    public float bulletDamage = 5f;
     // Use this for initialization
     void Start()
     {
@@ -49,8 +51,7 @@ public class Bullet : MonoBehaviour
         Health script = other.gameObject.GetComponent<Health>();
         if (script != null)
         {
-            print("bullet hit!");
-            script.ModifyHealth(-5);
+            script.ModifyHealth(-1 * bulletDamage);
             Destroy(this.gameObject);
         }
     }
