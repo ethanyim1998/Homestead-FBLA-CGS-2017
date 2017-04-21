@@ -4,17 +4,32 @@ using UnityEngine;
 
 public class BarrelHP : MonoBehaviour {
 
-	private Rigidbody2D rb;
-	public int maxHP = 1;
-	private int currentHP;
-	// Use this for initialization
-	void Start () {
-		rb = GetComponent<Rigidbody2D>();
-		currentHP = maxHP;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public float MaxHealth = 50f;
+
+    //if we get more that this amount of damage we violently insta explode
+    public float ExplodeDamageThreshold = 25f;
+    Health health;
+
+
+
+
+    void Awake() {
+        health = GetComponent<Health>();
+        //inject barrell health
+        health.Value = MaxHealth;
+        health.OnDamageReceived += ProcessDamage;
+
+    }
+
+    void ProcessDamage(float value) {
+        float damage = Mathf.Abs(value);
+        if(damage > ExplodeDamageThreshold) {
+            //ViolentlyExplode();
+            return;
+        }
+        if(health.Value <= 0) {
+            Destroy(gameObject);
+        }
+    }
+
 }
