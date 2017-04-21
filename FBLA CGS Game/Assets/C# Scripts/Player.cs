@@ -38,7 +38,6 @@ public class Player : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown(KeyCode.LeftShift)) {
-			print("shift logged");
 			Instantiate(bullet, this.transform.position, this.transform.rotation);
 		}
 		

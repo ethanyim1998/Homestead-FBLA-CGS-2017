@@ -15,30 +15,42 @@ public class Bullet : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectsWithTag("Player")[0];
 
-        if (player.GetComponent<Rigidbody2D>().transform.localScale.x >= 0) {
-            transform.localScale = new Vector3(-1 * transform.localScale.x, 1*transform.localScale.y, 1*transform.localScale.z);
+        if (player.GetComponent<Rigidbody2D>().transform.localScale.x >= 0)
+        {
+            transform.localScale = new Vector3(-1 * transform.localScale.x, 1 * transform.localScale.y, 1 * transform.localScale.z);
             rb.velocity = new Vector2(bulletSpeed, 0);
         }
         else
             rb.velocity = new Vector2(-bulletSpeed, 0);
 
-            
-       
-        
+
+
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-          
+
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        /*
         if (other.gameObject.tag.Equals("Barrel")) {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
+            //Destroy(this.gameObject);
+        }  */
+        if (other.gameObject.tag.Equals("Wall"))
+        {
             Destroy(this.gameObject);
-        } else if (other.gameObject.tag.Equals("Wall")) {
+        }
+        Health script = other.gameObject.GetComponent<Health>();
+        if (script != null)
+        {
+            print("bullet hit!");
+            script.ModifyHealth(-5);
             Destroy(this.gameObject);
         }
     }
