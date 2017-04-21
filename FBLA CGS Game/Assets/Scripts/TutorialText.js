@@ -6,6 +6,7 @@ public var textBox : Text;
 public var instructions: String[] = ["Level 1: Tutorial",
 									 "Use the left and right arrows to move", 
 									 "Use the up arrow to jump",
+									 "Use the left shift key to fire bullets",
 									 "When you reach a portal, press the space bar to teleport between portals",
 									 "When you reach the flag, you will be able to move onto the next level"];
 private var instructionNum : int;
