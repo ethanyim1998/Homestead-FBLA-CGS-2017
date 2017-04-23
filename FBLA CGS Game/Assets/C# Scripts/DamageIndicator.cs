@@ -6,7 +6,7 @@ public class DamageIndicator : MonoBehaviour
 {
 
     public float fadeRate = 0.4f;
-	public float speed;
+    public float speed;
 
     // Use this for initialization
     void Start()
@@ -27,5 +27,8 @@ public class DamageIndicator : MonoBehaviour
         col.a -= fadeRate * Time.deltaTime;
         txt.color = col;
 
+
+        if (col.a <= 0)
+            Destroy(this.gameObject);
     }
 }
