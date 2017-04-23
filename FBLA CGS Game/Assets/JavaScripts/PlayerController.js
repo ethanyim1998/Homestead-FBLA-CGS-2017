@@ -7,6 +7,7 @@ private var teleLocX : float;
 private var teleLocY : float;
 public var isHit : boolean = false;
 public var rb: Rigidbody2D;
+public static var loadedLevelName : String;
 
 
 function Start(){
@@ -18,6 +19,7 @@ function Start(){
 
 function FixedUpdate(){
 	teleport();
+	loadedLevelName = Application.loadedLevelName;
 }
 
 
@@ -64,12 +66,7 @@ function teleport(){
 }
 
 function changeScene(){
-	if (Application.loadedLevelName == "Scene 1")
-		SceneManager.LoadScene("Scene 2");
-	else if (Application.loadedLevelName == "Scene 2")
-		SceneManager.LoadScene("Scene 3");
-	else if (Application.loadedLevelName == "Scene 3")
-		SceneManager.LoadScene("Scoreboard");
+	SceneManager.LoadScene("Loading");
 
 }
 
