@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class GroundControl : MonoBehaviour
 {
+    private string[] invalidList = new string[] { "Portal", "Question", "Wall", "Flag", "Bullet", "Player", "Barrel" };
     private Player player;
 
-	private float groundTime;
+    private float groundTime;
 
-	public float delayTime = 0.04f;
+    public float delayTime = 0.04f;
     void Start()
     {
         player = gameObject.GetComponentInParent<Player>();
@@ -21,12 +22,22 @@ public class GroundControl : MonoBehaviour
     /// <param name="other">The other Collider2D involved in this collision.</param>
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag != "Portal" && other.gameObject.tag != "Question" && other.gameObject.tag != "Wall" && other.gameObject.tag != "Flag" && other.gameObject.tag != "Barrel")
+        if (checkForInvalidCollision(other.gameObject.tag))
         {
             //StartCoroutine(Delay(1f));  Does not work
-			print("Clock started");
-			groundTime = Time.realtimeSinceStartup;
+            print("Clock started");
+            groundTime = Time.realtimeSinceStartup;
         }
+    }
+
+    private bool checkForInvalidCollision(string other)
+    {
+        for (int i = 0; i < invalidList.Length; i++)
+        {
+            if (other == invalidList[i])
+                return false;
+        }
+        return true;
     }
 
     IEnumerator Delay(float delay)
@@ -44,19 +55,22 @@ public class GroundControl : MonoBehaviour
          /// <param name="other">The other Collider2D involved in this collision.</param>
    OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag != "Portal" && other.gameObject.tag != "Question" && other.gameObject.tag != "Wall" && other.gameObject.tag != "Flag" && other.gameObject.tag != "Barrel") {
-			print("left ground");
-			groundTime = 0;
-			player.grounded = false;
-		}
+        if (other.gameObject.tag != "Portal" && other.gameObject.tag != "Question" && other.gameObject.tag != "Wall" && other.gameObject.tag != "Flag" && other.gameObject.tag != "Barrel")
+        {
+            print("left ground");
+            groundTime = 0;
+            player.grounded = false;
+        }
     }
 
-	void Update() {
-		if (groundTime != 0 && groundTime  + delayTime  <= Time.realtimeSinceStartup) {
-			print("Time passed");
-			groundTime = 0;
-			player.grounded = true;
-		}
-	}
+    void Update()
+    {
+        if (groundTime != 0 && groundTime + delayTime <= Time.realtimeSinceStartup)
+        {
+            print("Time passed");
+            groundTime = 0;
+            player.grounded = true;
+        }
+    }
 
 }
